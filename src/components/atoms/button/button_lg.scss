@@ -1,0 +1,19 @@
+.lg-button {
+  background-color: #000;
+  font-size: 14px;
+  color: white;
+  width: 200px;
+  height: 55px;
+  border: 1px solid #333;
+  padding: 10px;
+  background: #000;
+  // display: inline-block;
+  // font-weight: bold;
+  $_fontfamily-minicho: "NotoSans JP";
+  $_fontfamily-gothic: "Roboto", "Noto Serif JP", "游ゴシック";
+  transition: 0.2s;
+
+  &:hover {
+    background: #442606;
+  }
+}
