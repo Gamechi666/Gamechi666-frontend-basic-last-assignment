@@ -1,14 +1,37 @@
+$layout-width-inner: 992px;
+
+$breakpoints: (
+  "xs": "screen and (max-width: 576px)",
+  "md": "screen and (max-width: #{$layout-width-inner - 1px})",
+  "lg": "screen and (min-width: #{$layout-width-inner})",
+);
+
+@mixin mq($breakpoint: xs) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
 .xs-button {
   background-color: #000;
   font-size: 14px;
   color: white;
-  width: 180px;
-  height: 45px;
   border: 1px solid #333;
   padding: 10px;
   background: #000;
-  // display: inline-block;
-  // font-weight: bold;
+  width: 180px;
+  height: 45px;
+
+  @include mq("md") {
+    width: 150px;
+    height: 55px;
+  }
+
+  @include mq("lg") {
+    width: 200px;
+    height: 55px;
+  }
+
   $_fontfamily-minicho: "NotoSans JP";
   $_fontfamily-gothic: "Roboto", "Noto Serif JP", "游ゴシック";
   transition: 0.2s;
