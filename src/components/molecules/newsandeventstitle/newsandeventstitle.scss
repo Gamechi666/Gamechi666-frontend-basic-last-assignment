@@ -2,8 +2,8 @@ $layout-width-inner: 992px;
 
 $breakpoints: (
   "xs": "screen and (max-width:576px)",
-  "md": "screen and (max-width: #{$layout-width-inner - 1px})" "lg":
-    "screen and (min-width: #{$layout-width-inner})",
+  "md": "screen and (max-width: #{$layout-width-inner - 1px})",
+  "lg": "screen and (min-width: #{$layout-width-inner})",
 );
 
 @mixin mq($breakpoint: xs) {
@@ -12,21 +12,18 @@ $breakpoints: (
   }
 }
 
-.news {
+h1 {
   display: inline-block;
-  padding: 20px;
-  h1 {
-    font-family: "Source Serif 4", sans-serif;
-    vertical-align: top;
-    font-size: 70px;
-    @include mq("md");
+  font-family: "Source Serif 4", sans-serif;
+  font-size: 70px;
+  vertical-align: middle;
+  @include mq("md") {
+    font-size: 35px;
   }
 }
-.tips {
-  display: inline-block;
+h4 {
   padding: 20px;
-  h4 {
-    font-family: sans-serif;
-    vertical-align: top;
-  }
+  display: inline-block;
+  vertical-align: middle;
+  font-family: sans-serif;
 }
