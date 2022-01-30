@@ -1,0 +1,10 @@
+.notice {
+  font-size: 20px;
+  background-color: transparent;
+  border-color: transparent;
+  $_fontfamily-gotic: "Roboto", "Noto Sans JP", "游ゴシック";
+  &:hover {
+    color: #999999;
+    transition: 0.2s;
+  }
+}
