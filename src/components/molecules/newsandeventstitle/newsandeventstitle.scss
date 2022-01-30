@@ -1,0 +1,29 @@
+$layout-width-inner: 992px;
+
+$breakpoints: (
+  "xs": "screen and (max-width:576px)",
+  "md": "screen and (max-width: #{$layout-width-inner - 1px})",
+  "lg": "screen and (min-width: #{$layout-width-inner})",
+);
+
+@mixin mq($breakpoint: xs) {
+  @media #{map-get($breakpoints,$breakpoint)} {
+    @content;
+  }
+}
+
+h1 {
+  display: inline-block;
+  font-family: "Source Serif 4", sans-serif;
+  font-size: 70px;
+  vertical-align: middle;
+  @include mq("md") {
+    font-size: 35px;
+  }
+}
+h4 {
+  padding: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: sans-serif;
+}
